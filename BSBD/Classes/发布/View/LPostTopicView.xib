@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LPostTopicView">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-sy-7hc">
+                    <rect key="frame" x="0.0" y="70" width="260" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omk-Ng-C8e">
+                            <rect key="frame" x="10" y="0.0" width="19" height="35"/>
+                            <state key="normal" image="post-@"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcM-Wb-YR7">
+                            <rect key="frame" x="39" y="0.0" width="19" height="35"/>
+                            <state key="normal" image="post-#"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.95636387050000005" blue="0.27800160940000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="BNu-1Y-f6J"/>
+                        <constraint firstItem="omk-Ng-C8e" firstAttribute="top" secondItem="vTw-sy-7hc" secondAttribute="top" id="QXX-4E-HvP"/>
+                        <constraint firstAttribute="bottom" secondItem="HcM-Wb-YR7" secondAttribute="bottom" id="V5V-eb-O8V"/>
+                        <constraint firstItem="HcM-Wb-YR7" firstAttribute="leading" secondItem="omk-Ng-C8e" secondAttribute="trailing" constant="10" id="WRc-eg-joR"/>
+                        <constraint firstItem="omk-Ng-C8e" firstAttribute="leading" secondItem="vTw-sy-7hc" secondAttribute="leading" constant="10" id="cl6-K1-d7r"/>
+                        <constraint firstItem="HcM-Wb-YR7" firstAttribute="top" secondItem="vTw-sy-7hc" secondAttribute="top" id="wgM-Qv-9tC"/>
+                        <constraint firstAttribute="bottom" secondItem="omk-Ng-C8e" secondAttribute="bottom" id="zj7-cr-k68"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc0-qo-7tV" userLabel="加好按钮">
+                    <rect key="frame" x="10" y="10" width="40" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="22q-mh-8Pf"/>
+                        <constraint firstAttribute="width" constant="40" id="DCV-fS-sqF"/>
+                    </constraints>
+                    <state key="normal" image="tag_add_icon"/>
+                    <connections>
+                        <action selector="addTag" destination="iN0-l3-epB" eventType="touchUpInside" id="0cS-Jf-QtX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="Vc0-qo-7tV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="1pb-NZ-s4U"/>
+                <constraint firstItem="vTw-sy-7hc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ajs-MP-KYn"/>
+                <constraint firstItem="Vc0-qo-7tV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="bqd-1t-XQ8"/>
+                <constraint firstAttribute="bottom" secondItem="vTw-sy-7hc" secondAttribute="bottom" id="fyE-D2-wGW"/>
+                <constraint firstAttribute="trailing" secondItem="vTw-sy-7hc" secondAttribute="trailing" id="gea-VT-lJK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="Vc0-qo-7tV" id="XB7-xa-SWe"/>
+            </connections>
+            <point key="canvasLocation" x="112" y="106.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="post-#" width="19" height="19"/>
+        <image name="post-@" width="19" height="19"/>
+        <image name="tag_add_icon" width="40" height="25"/>
+    </resources>
+</document>

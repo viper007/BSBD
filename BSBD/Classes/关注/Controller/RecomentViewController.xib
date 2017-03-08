@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecomentViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="ZRw-y4-Xkj" id="fah-bp-s7H"/>
+                <outlet property="userTableView" destination="akW-TA-bho" id="G6W-gv-f0a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-y4-Xkj">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Enn-1r-Uvu"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="57S-DZ-Iuo"/>
+                        <outlet property="delegate" destination="-1" id="Syg-XP-pwZ"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akW-TA-bho">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cgp-7b-cSx"/>
+                        <outlet property="delegate" destination="-1" id="nth-O2-TJl"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="akW-TA-bho" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9Bq-lx-znE"/>
+                <constraint firstItem="ZRw-y4-Xkj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KSj-Hi-N27"/>
+                <constraint firstAttribute="bottom" secondItem="akW-TA-bho" secondAttribute="bottom" id="ZBW-Ok-9bQ"/>
+                <constraint firstAttribute="trailing" secondItem="akW-TA-bho" secondAttribute="trailing" id="mnu-Wd-P4M"/>
+                <constraint firstItem="akW-TA-bho" firstAttribute="leading" secondItem="ZRw-y4-Xkj" secondAttribute="trailing" id="pz8-NV-adG"/>
+                <constraint firstAttribute="bottom" secondItem="ZRw-y4-Xkj" secondAttribute="bottom" id="vyH-TN-TBW"/>
+                <constraint firstItem="ZRw-y4-Xkj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xVa-SD-PDk"/>
+            </constraints>
+            <point key="canvasLocation" x="81" y="95"/>
+        </view>
+    </objects>
+</document>
