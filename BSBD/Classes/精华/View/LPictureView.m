@@ -72,15 +72,17 @@
             [image drawInRect:CGRectMake(0, 0, width, height)];
             self.animatedImage.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //找到存在对应的文件夹下的图片资源播放
+                NSData *data = [[SDWebImageManager sharedManager].imageCache diskImageDataBySearchingAllPathsForKey:topic.small_image];
+                FLAnimatedImage * AnmImage = [FLAnimatedImage animatedImageWithGIFData:data];
+                self.animatedImage.animatedImage = AnmImage;
+            });
         }
         //self.animatedImageView.image = image;
     }];
     
-    if ([topic.small_image hasSuffix:@"gif"]) {
-        NSData *data = [[SDWebImageManager sharedManager].imageCache diskImageDataBySearchingAllPathsForKey:topic.small_image];
-        FLAnimatedImage * AnmImage = [FLAnimatedImage animatedImageWithGIFData:data];
-        self.animatedImage.animatedImage = AnmImage;
-    }
     //怎么去判断是否显示图标？？ 还有是否显示点击查看大图的图
     
     //是否为gif图片
